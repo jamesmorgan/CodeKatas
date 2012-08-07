@@ -3,6 +3,7 @@ package workers;
 import bahaviours.PriceListener;
 import bahaviours.Printer;
 
+@SuppressWarnings("unqualified-field-access")
 public class Item {
 
 	private final Discount discount;
@@ -18,26 +19,26 @@ public class Item {
 	}
 
 	public boolean isBeingPruchrased(final char ordItm) {
-		return this.alais == ordItm;
+		return alais == ordItm;
 	}
 
 	public void printReceipt(final Printer receipt) {
-		receipt.print(new StringBuilder().append(this.name)
+		receipt.print(new StringBuilder().append(name)
 			.append(" ")
-			.append(this.price)
+			.append(price)
 			.append("p")
 			.toString());
 	}
 
 	public boolean isDiscounted(final int quantityPurchased) {
-		return this.discount.isApplicable(quantityPurchased);
+		return discount.isApplicable(quantityPurchased);
 	}
 
 	public void applyDiscount(final PriceListener itemListener, final Printer receipt) {
-		this.discount.applyDiscount(itemListener, receipt);
+		discount.applyDiscount(itemListener, receipt);
 	}
 
 	public void applyCost(final PriceListener itemListener) {
-		itemListener.added(this.price);
+		itemListener.added(price);
 	}
 }

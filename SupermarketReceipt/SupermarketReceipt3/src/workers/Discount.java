@@ -3,6 +3,7 @@ package workers;
 import bahaviours.PriceListener;
 import bahaviours.Printer;
 
+@SuppressWarnings("unqualified-field-access")
 public class Discount {
 
 	public static final Discount NONE = new Discount(0, 0, "");
@@ -18,12 +19,12 @@ public class Discount {
 	}
 
 	public boolean isApplicable(final int quantityPurchased) {
-		return this.quantity == quantityPurchased;
+		return quantity == quantityPurchased;
 	}
 
 	public void applyDiscount(final PriceListener itemListener, final Printer receipt) {
-		itemListener.deducted(this.discount);
-		receipt.print(this.discountLabel);
+		itemListener.deducted(discount);
+		receipt.print(discountLabel);
 	}
 
 }
