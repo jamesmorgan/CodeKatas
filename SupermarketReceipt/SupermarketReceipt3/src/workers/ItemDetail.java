@@ -5,9 +5,9 @@ import bahaviours.Printer;
 
 public class ItemDetail {
 
-	private Item item;
-	private Printer receipt;
-	private PriceListener itemListener;
+	private final Item item;
+	private final Printer receipt;
+	private final PriceListener itemListener;
 
 	private int quantityPurchased;
 
