@@ -2,7 +2,6 @@ package workers;
 
 import bahaviours.Printer;
 
-@SuppressWarnings("unqualified-field-access")
 public class Total {
 
 	private int total;

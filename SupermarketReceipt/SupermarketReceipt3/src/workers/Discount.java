@@ -3,7 +3,6 @@ package workers;
 import bahaviours.PriceListener;
 import bahaviours.Printer;
 
-@SuppressWarnings("unqualified-field-access")
 public class Discount {
 
 	public static final Discount NONE = new Discount(0, 0, "");

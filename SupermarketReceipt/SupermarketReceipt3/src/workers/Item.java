@@ -3,7 +3,6 @@ package workers;
 import bahaviours.PriceListener;
 import bahaviours.Printer;
 
-@SuppressWarnings("unqualified-field-access")
 public class Item {
 
 	private final Discount discount;

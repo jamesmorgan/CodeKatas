@@ -3,7 +3,6 @@ package workers;
 import java.util.ArrayList;
 import java.util.List;
 
-@SuppressWarnings("unqualified-field-access")
 public class ItemDetails {
 
 	private List<ItemDetail> details = new ArrayList<ItemDetail>();
